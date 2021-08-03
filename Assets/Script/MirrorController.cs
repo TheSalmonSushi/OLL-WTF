@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MirrorController : MonoBehaviour
 {
-     [SerializeField] protected KeyCode whichObject; //keybind untuk menentukan object yang ingin diputar
+    [SerializeField] protected KeyCode whichObject; //keybind untuk menentukan object yang ingin diputar
     [SerializeField] protected KeyCode rotateLeft; //keybind untuk rotasi ke ke kiri atau ccw
     [SerializeField] protected KeyCode rotateRight; //keybind untuk rotasi ke kanan atau cw
     [SerializeField] protected KeyCode moveLeft; //keybind untuk gerak ke kiri
@@ -39,6 +39,7 @@ public class MirrorController : MonoBehaviour
         Outline9;
    
     public bool choose = false;
+    
     private float x, y, z;
     
 
@@ -392,18 +393,23 @@ public class MirrorController : MonoBehaviour
         if(direction.x == 1)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
+           
+
         }
         if(direction.x == -1)
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
+           
         }
         if(direction.y == 1)
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
+            
         }
         if(direction.y == -1)
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
+           
         }
     }
 }
